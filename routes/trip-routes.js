@@ -3,8 +3,12 @@
 var db = require("../models");
 
 module.exports = function (app) {
-    // code goes here
-    app.get("/trips", function (req, res) {
-        // getting all trips AKA read
-    });
-}
+  // code goes here
+  app.get("/trips", function (req, res) {
+    // getting all trips AKA read
+    console.log(db);
+    console.log(req);
+    console.log(res);
+  });
+
+};
