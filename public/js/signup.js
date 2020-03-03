@@ -29,6 +29,9 @@ $(document).ready(function () {
       password: password
     })
       .then(function (data) {
+
+        console.log(data);
+
         window.location.replace("/members");
         console.log(data);
         // If there's an error, handle it by throwing up a bootstrap alert
