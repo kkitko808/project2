@@ -3,12 +3,44 @@
 var db = require("../models");
 
 module.exports = function (app) {
-  // code goes here
-  app.get("/trips", function (req, res) {
-    // getting all trips AKA read
+
+  // getting all trips
+  app.get("/api/trips", function (req, res) {
     console.log(db);
     console.log(req);
     console.log(res);
+    db.Trips.findAll({})
+      .then(function (dbTrips) {
+        res.json(dbTrips);
+      });
+  });
+
+  // post
+  app.post("/api/trips", function (req, res) {
+    console.log(req.body);
+    db.Trips.create({
+      destination: req.body.destination,
+      activity: req.body.activity,
+      time: req.body.time
+    })
+      .then(function (dbTrip) {
+        res.json(dbTrip);
+      });
+  });
+
+  // put
+
+
+  // DELETE route for deleting posts
+  app.delete("/api/trips/:id", function (req, res) {
+    db.Trips.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(function (dbTrip) {
+        res.json(dbTrip);
+      });
   });
 
 };
