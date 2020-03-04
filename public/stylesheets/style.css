@@ -1,3 +1,17 @@
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+
+p.logIn, p.signUp {
+    font-size: 18px;
+    color: white;
+    text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
+
+  }
+nav {
+    opacity: 50%;
+}
 body {    
     
     background-image: url(white-boats-on-body-of-water-2265876.jpg);
@@ -6,11 +20,21 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
 }
+#element1 {display:inline-block;margin-right:10px;} 
+#element2 {display:inline-block;} 
 h1 {
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
-/* .card-body {
-    opacity: 0.5;
-  } */
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(168, 211, 214, 0.733);
+    color: white;
+    text-align: center;
+ }
 
   
