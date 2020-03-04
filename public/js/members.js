@@ -6,7 +6,7 @@ $(document).ready(function () {
   });
 
   // This function does an API call to delete posts
-  $(".delete-trip").on("click", function (event) {
+  $(".delete-trip").on("click", function () {
     var id = $(this).data("id");
 
     // Send the DELETE request.
