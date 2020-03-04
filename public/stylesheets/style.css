@@ -1,4 +1,16 @@
-form.signup,
-form.login {
-  margin-top: 50px;
+body {    
+    
+    background-image: url(white-boats-on-body-of-water-2265876.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
+h1 {
+    text-align: center;
+}
+/* .card-body {
+    opacity: 0.5;
+  } */
+
+  
