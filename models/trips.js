@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   const Trips = sequelize.define("Trips", {
     destination: DataTypes.STRING,
     activity: DataTypes.STRING,
-    time: DataTypes.INTEGER
+    time: DataTypes.STRING
   }, {});
   Trips.associate = function (models) {
     // associations can be defined here
