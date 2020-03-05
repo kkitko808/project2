@@ -78,10 +78,3 @@ $(".submit").on("click", function(event) {
   location.reload();
 
 });
-
-$(function () {
-  $('#datetimepicker12').datetimepicker({
-      inline: true,
-      sideBySide: true
-  });
-});
