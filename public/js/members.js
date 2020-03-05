@@ -61,8 +61,9 @@ $(".submit").on("click", function (event) {
 
   $.post("/api/trips", newTrip,
     function (response) {
-
-      console.log(response);
+      var $capital = $(".capital");
+      var $population = $(".population");
+      var $language = $(".language");
       $capital.text(response[0].capital);
       $population.text(response[0].population);
       $language.text(response[0].languages[0]);
