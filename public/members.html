@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
   <title>Adventure Planner</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+  <link href="stylesheets/style.css" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap" rel="stylesheet">  
+  <link rel="shortcut icon" href="stylesheets\android-chrome-192x192.ico" type="image/x-icon">
 </head>
 
 <body>  
@@ -23,12 +23,13 @@
   </div>
 </nav>
   <div class="container">
-      <h1>Plan Your Adventure!</h1>    
+      <h1>Plan Your Next Adventure!</h1>    
     <div class="row">
       <div class="col-sm-4">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">APIs go here</h5>
+            <hr>
             <p class="card-text">Data from the API's go here and any other relevant information</p>
             <br>
             <br>
@@ -40,15 +41,14 @@
       <div class="col-sm-4">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Updated travel info below</h5>
-            <div class="row" id="itinerary-area">
-            
-            </div>
-            <p class="card-text">Itinerary with the updated info, or allows you to make changes
-            </p>
-            <br>
-            <br>
-            <br>
+            <h5 class="card-title">Here's your new travel plan</h5>
+            <hr>
+            <div class="row" id="itinerary-area">            
+            </div>            
+            <p class="card-text">You're going to New Zealand</p>
+            <p class="card-text">To do Scuba Diving</p>
+            <p class="card-text">At 2:00pm Tuesday, March 17th, 2020</p>
+            <br>            
             <br>
           </div>
         </div>
@@ -56,8 +56,9 @@
       <div class="col-sm-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">This area can contain input boxes or other types of input</h5>
-              <p class="card-text">It can accept input for our travel plans
+              <h5 class="card-title">Create Your Adventure Plan</h5>
+              <hr>
+              <p class="card-text">Create your itinerary
               </p>
               <form>
                 <div class="form-group">
@@ -66,7 +67,7 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleFormControlInput1">Activity</label>
-                  <input type="text" class="form-control" id="activity" placeholder="What do you want to do?">
+                  <input type="text" class="form-control" id="activity" placeholder="What would you like to do?">
                 </div>
                 <div class="form-group">
                   <label for="exampleFormControlSelect1">Time</label>
@@ -105,19 +106,17 @@
         </div>
     </div>
   </div>
-  <div class="footer">
+  <div class="footer">    
     <p>&copy Travel Masters 2020</p>
   </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
-  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
-
+  
 </body>
 
 </html>
