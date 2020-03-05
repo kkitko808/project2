@@ -75,3 +75,10 @@ $(".submit").on("click", function(event) {
     });
 
 });
+
+$(function () {
+  $('#datetimepicker12').datetimepicker({
+      inline: true,
+      sideBySide: true
+  });
+});
