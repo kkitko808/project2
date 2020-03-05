@@ -3,11 +3,16 @@ module.exports = (sequelize, DataTypes) => {
   const Trips = sequelize.define("Trips", {
     destination: DataTypes.STRING,
     activity: DataTypes.STRING,
-    time: DataTypes.INTEGER
+    time: DataTypes.STRING
   }, {});
   Trips.associate = function (models) {
-    // associations can be defined here
-    // add belongs to user
+    // trips belong to a user
+    models.Trips.belongsTo(models.User, {
+      onDelete: "CASCADE",
+      foreignKey: {
+        allowNull: false
+      }
+    });
     console.log(models);
   };
   return Trips;
