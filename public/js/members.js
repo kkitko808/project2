@@ -24,31 +24,31 @@ $(document).ready(function () {
 
 
   $.ajax({ url: "/api/members", method: "GET" })
-    .then(function(data) {
+    .then(function (data) {
       console.log(data);
 
       if (data.length !== 0) {
-  
+
         for (var i = 0; i < data.length; i++) {
-  
+
           var row = $("<div>");
           row.addClass("trip");
-  
+
           row.append("<p>" + data[i].destination + "</p>");
           row.append("<p>" + data[i].activity + "</p>");
-          row.append("<p>" + data[i].time+ "</p>");
-          row.append(`<button class="delete-trip" id=${i+1}>Delete</button>`);
-          row.append(`<button class="update-trip" id=${i+1}>Update</button>`);
-  
+          row.append("<p>" + data[i].time + "</p>");
+          row.append(`<button class="delete-trip" id=${i + 1}>Delete</button>`);
+          row.append(`<button class="update-trip" id=${i + 1}>Update</button>`);
+
           $("#itinerary-area").prepend(row);
-  
+
         }
       }
     });
 });
 
 
-$(".submit").on("click", function(event) {
+$(".submit").on("click", function (event) {
   event.preventDefault();
 
   // Here we grab the form elements
@@ -60,24 +60,22 @@ $(".submit").on("click", function(event) {
   console.log(newTrip);
 
   $.post("/api/trips", newTrip,
-    function(data) {
-      console.log(data);
-      
-
+    function (response) {
+      var $capital = $(".capital");
+      var $population = $(".population");
+      var $language = $(".language");
+      $capital.text(response[0].capital);
+      $population.text(response[0].population);
+      $language.text(response[0].languages[0]);
       // Clear the form when submitting
       $("#destination").val("");
       $("#activity").val("");
       $("#time").val("");
-
     });
-
-  location.reload();
-
 });
-
 //Put request (update activity details)
 
-$(".update-trip").on("click", function(event) {
+$(".update-trip").on("click", function (event) {
   event.preventDefault();
 
   var id = $(this).attr("id");
@@ -102,17 +100,14 @@ $(".update-trip").on("click", function(event) {
   console.log(newTrip);
 
   $.post("/api/trips", newTrip,
-    function(data) {
+    function (data) {
       console.log(data);
-      
-
       // Clear the form when submitting
       $("#destination").val("");
       $("#activity").val("");
       $("#time").val("");
 
     });
-
   location.reload();
 
 });
