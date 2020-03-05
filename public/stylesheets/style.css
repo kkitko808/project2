@@ -5,12 +5,15 @@ form.login {
 h5 {
     font-weight: 400;
 }
-p.logIn, p.signUp {
+/* p.logIn, p.signUp {
     font-size: 18px;
     color: white;
     text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
     
-  }
+  } */
+span.badge {
+    opacity: 75%;
+}
 nav {
     opacity: 50%;
 }
