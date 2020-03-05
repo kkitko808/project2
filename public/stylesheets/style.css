@@ -2,13 +2,18 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
-
-p.logIn, p.signUp {
+h5 {
+    font-weight: 400;
+}
+/* p.logIn, p.signUp {
     font-size: 18px;
     color: white;
     text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
-
-  }
+    
+  } */
+span.badge {
+    opacity: 75%;
+}
 nav {
     opacity: 50%;
 }
@@ -19,22 +24,36 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100%;
+    
 }
-#element1 {display:inline-block;margin-right:10px;} 
-#element2 {display:inline-block;} 
+
 h1 {
+    font-family: 'El Messiri', sans-serif;
     text-align: center;
-    margin-top: 50px;
+    font-size: 5rem;    
+    margin-top: 40px;
     margin-bottom: 50px;
+    /* background-color: rgba(91, 231, 241, 0.575); */
+    color: whitesmoke;
+    text-shadow: rgba(88, 87, 114, 0.815) 1px 0 10px;
 }
 .footer {
     position: relative;
-    left: 0;
-    bottom: 0;
+    opacity: 95%;
+    bottom: -4rem;
     width: 100%;
-    background-color: rgba(168, 211, 214, 0.733);
+    background-color: rgba(74, 211, 221, 0.603);
     color: white;
     text-align: center;
+    margin:1px;
+    padding: 10px;
+    height:50px;      
+    /* background:rgb(99, 156, 167); */
+    
  }
 
-  
+ div.card {
+     background-color: rgba(235, 247, 247, 0.911);
+     font-family: 'El Messiri', sans-serif;
+     
+ } 
