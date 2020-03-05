@@ -116,4 +116,3 @@ $(".update-trip").on("click", function(event) {
   location.reload();
 
 });
-

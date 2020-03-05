@@ -11,6 +11,9 @@ h5 {
     text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
     
   } */
+  .trip {
+      display: block;
+  }
 span.badge {
     opacity: 75%;
 }
@@ -57,3 +60,4 @@ h1 {
      font-family: 'El Messiri', sans-serif;
      
  } 
+ 
