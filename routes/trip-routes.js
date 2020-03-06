@@ -85,7 +85,7 @@ module.exports = function (app) {
             "x-rapidapi-key": "17c7296748msh2331487f6775125p15f5e8jsn36e70eea3fb8"
           }
         }).then((response) => {
-          console.log(response)
+          console.log(response);
           persistRes.capital = response.data[0].capital;
           persistRes.population = response.data[0].population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
           persistRes.languages = response.data[0].languages[0];

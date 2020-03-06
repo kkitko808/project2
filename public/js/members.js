@@ -54,11 +54,11 @@ $(document).ready(function () {
           $("#date").val("");
           $("#time").val("");
         }).then(function () {
-          $capital.text(capital);
-          $population.text(population);
-          $language.text(languages);
-          getAllTrips();
-        });
+        $capital.text(capital);
+        $population.text(population);
+        $language.text(languages);
+        getAllTrips();
+      });
     }
     else {
       var $capital = $(".capital");
@@ -75,7 +75,7 @@ $(document).ready(function () {
       createFormText();
       $.ajax({ url: "/api/trips", method: "PUT", data: updatingTrip })
         .then(function (response) {
-          console.log(response)
+          console.log(response);
           $capital.text(response.capital);
           $population.text(response.population);
           $language.text(response.languages);
