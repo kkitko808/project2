@@ -54,11 +54,11 @@ $(document).ready(function () {
           $("#date").val("");
           $("#time").val("");
         }).then(function () {
-          $capital.text(capital);
-          $population.text(population);
-          $language.text(languages);
-          getAllTrips();
-        });
+        $capital.text(capital);
+        $population.text(population);
+        $language.text(languages);
+        getAllTrips();
+      });
     }
     else {
       var $capital = $(".capital");
@@ -97,12 +97,12 @@ $(document).ready(function () {
     updatingFormText();
     $.get("/api/trip/" + updatingId).then(
       function (response) {
-        console.log(response)
+        console.log(response);
         $("#destination").val(response.destination);
         $("#activity").val(response.activity);
         $("#date").val(response.date);
         $("#time").val(response.time);
-      })
+      });
   });
 });
 function updatingFormText() {
