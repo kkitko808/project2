@@ -51,6 +51,7 @@ $(document).ready(function () {
           // Clear the form when submitting
           $("#destination").val("");
           $("#activity").val("");
+          $("#date").val("");
           $("#time").val("");
         }).then(function () {
         $capital.text(capital);
@@ -60,6 +61,9 @@ $(document).ready(function () {
       });
     }
     else {
+      var $capital = $(".capital");
+      var $population = $(".population");
+      var $language = $(".language");
       var updatingTrip = {
         id: updatingId,
         destination: $("#destination").val().trim(),
@@ -70,9 +74,12 @@ $(document).ready(function () {
       updating = false;
       createFormText();
       $.ajax({ url: "/api/trips", method: "PUT", data: updatingTrip })
-        .then(function (data) {
-          console.log(data);
-          location.reload();
+        .then(function (response) {
+          console.log(response);
+          $capital.text(response.capital);
+          $population.text(response.population);
+          $language.text(response.languages);
+          getAllTrips();
         }
         );
     }
