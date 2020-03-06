@@ -34,6 +34,7 @@ $(document).ready(function () {
       var newTrip = {
         destination: $("#destination").val().trim(),
         activity: $("#activity").val().trim(),
+        date: $("#date").val().trim(),
         time: $("#time").val().trim(),
       };
       console.log(newTrip);
@@ -63,6 +64,7 @@ $(document).ready(function () {
         id: updatingId,
         destination: $("#destination").val().trim(),
         activity: $("#activity").val().trim(),
+        date: $("#date").val().trim(),
         time: $("#time").val().trim(),
       };
       updating = false;

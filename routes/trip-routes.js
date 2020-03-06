@@ -30,6 +30,7 @@ module.exports = function (app) {
     db.Trips.create({
       destination: req.body.destination,
       activity: req.body.activity,
+      date: req.body.date,
       time: req.body.time,
       UserId: req.user.id
     })
