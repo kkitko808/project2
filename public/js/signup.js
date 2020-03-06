@@ -40,7 +40,7 @@ $(document).ready(function () {
   }
 
   function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
+    $("#alert").text("Your email is already in use!");
     $("#alert").fadeIn(500);
   }
 });
