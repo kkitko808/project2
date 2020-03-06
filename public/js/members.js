@@ -24,45 +24,28 @@ $(document).ready(function () {
 
 
   $.ajax({ url: "/api/members", method: "GET" })
-    .then(function(data) {
-      console.log("Data:",data);
+    .then(function (data) {
+      console.log(data);
 
       if (data.length !== 0) {
 
         for (var i = 0; i < data.length; i++) {
 
+          var row = $("<div>");
+          row.addClass("trip");
 
-          $("#itinerary-area").prepend(`<div class="card" id="nested-card" style="width: 18rem;">        
-          <div class="card-body" id="new-trip">
-            <h5 class="card-title">${data[i].destination}</h5>
-            <p class="card-text">${data[i].activity}</p>
-            <p class="card-text">${data[i].date}</p>
-            <p class="card-text">${data[i].time}</p>
-            
-            <button class="delete-trip btn btn-danger" id=${i+1}>Delete</button>
-            <button class="update-trip btn btn-success" id=${i+1}>Update</button>
-          </div>
-        </div>`);
+          row.append("<p>" + data[i].destination + "</p>");
+          row.append("<p>" + data[i].activity + "</p>");
+          row.append("<p>" + data[i].time + "</p>");
+          row.append(`<button class="delete-trip" id=${i + 1}>Delete</button>`);
+          row.append(`<button class="update-trip" id=${i + 1}>Update</button>`);
+
+          $("#itinerary-area").prepend(row);
 
         }
       }
     });
-
-        // <p class="card-text">${data[i].date}</p>
-        
-        //   var row = $("<div>");
-        //   row.addClass("trip");
-  
-        //   row.append("<p>" + "You're going to: " + data[i].destination + "</p>");
-        //   row.append("<p>" + "To do: " + data[i].activity + "</p>");
-        //   row.append("<p>" + "At: " + data[i].time+ "</p>");
-        //   row.append(`<button class="delete-trip" id=${i+1}>Delete</button>`);
-        //   row.append(`<button class="update-trip" id=${i+1}>Update</button>`);
-  
-        //   $("#itinerary-area").prepend(row);
-  
-        // }
-
+});
 
 
 $(".submit").on("click", function (event) {
@@ -126,7 +109,5 @@ $(".update-trip").on("click", function (event) {
 
     });
   location.reload();
-
-});
 
 });

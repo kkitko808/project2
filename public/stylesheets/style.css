@@ -2,25 +2,32 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
-
 h5 {
     font-weight: 400;
 }
-
+/* p.logIn, p.signUp {
+    font-size: 18px;
+    color: white;
+    text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
+    
+  } */
+  .trip {
+      display: block;
+  }
 span.badge {
     opacity: 75%;
 }
-
 nav {
     opacity: 50%;
 }
-
-body {        
+body {    
+    
     background-image: url(white-boats-on-body-of-water-2265876.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100%;    
+    background-size: 100%;
+    
 }
 
 h1 {
@@ -29,39 +36,28 @@ h1 {
     font-size: 5rem;    
     margin-top: 40px;
     margin-bottom: 50px;
+    /* background-color: rgba(91, 231, 241, 0.575); */
     color: whitesmoke;
     text-shadow: rgba(88, 87, 114, 0.815) 1px 0 10px;
 }
-
 .footer {
-    position: static;
+    position: relative;
     opacity: 95%;
-    bottom: 1rem;
+    bottom: -4rem;
     width: 100%;
     background-color: rgba(74, 211, 221, 0.603);
     color: white;
     text-align: center;
-    margin-top: 50px;
+    margin:1px;
     padding: 10px;
-    height:50px;    
+    height:50px;      
+    /* background:rgb(99, 156, 167); */
+    
  }
 
- .trip {
-    display: block;
-}
-
- .card {
+ div.card {
      background-color: rgba(235, 247, 247, 0.911);
-     font-family: 'El Messiri', sans-serif;     
+     font-family: 'El Messiri', sans-serif;
+     
  } 
- .card-title {
-     text-align: center;
- }
- #new-trip {
-     margin: auto;     
- }
- #nested-card {
-     background-color: white;
-     margin: auto;
- }
  
