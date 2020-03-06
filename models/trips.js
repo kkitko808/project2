@@ -3,8 +3,8 @@ module.exports = (sequelize, DataTypes) => {
   const Trips = sequelize.define("Trips", {
     destination: DataTypes.STRING,
     activity: DataTypes.STRING,
-    date: DataTypes.STRING,
-    time: DataTypes.STRING
+    date: DataTypes.DATEONLY,
+    time: DataTypes.TIME
   }, {});
   Trips.associate = function (models) {
     // trips belong to a user

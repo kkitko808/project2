@@ -16,7 +16,11 @@ module.exports = function (app) {
     db.Trips.findAll({
       where: {
         UserId: req.user.id
-      }
+      },
+      order:[
+        ["date", "DESC"],
+        ["time", "DESC"]
+      ]
     })
       .then(function (dbTrips) {
         res.json(dbTrips);
