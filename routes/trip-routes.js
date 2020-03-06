@@ -1,7 +1,12 @@
 // CRUD for trip table accepts get, post, put, delete
 
 var db = require("../models");
-
+const axios = require("axios");
+var persistRes = {
+  capital: null,
+  population: null,
+  languages: null
+};
 module.exports = function (app) {
 
   // getting all trips
@@ -31,8 +36,6 @@ module.exports = function (app) {
       .then(function () {
         // res.json(dbTrip);
         console.log("test");
-        const axios = require("axios");
-
         axios({
           "method": "GET",
           "url": "https://restcountries-v1.p.rapidapi.com/name/" + req.body.destination,
@@ -42,8 +45,12 @@ module.exports = function (app) {
             "x-rapidapi-key": "17c7296748msh2331487f6775125p15f5e8jsn36e70eea3fb8"
           }
         }).then((response) => {
+          persistRes.capital = response.data[0].capital;
+          persistRes.population = response.data[0].population;
+          persistRes.languages = response.data[0].languages[0];
           console.log("recieved data!");
-          res.send(response.data);
+          console.log(persistRes);
+          res.send(persistRes);
         });
 
       })
@@ -54,18 +61,42 @@ module.exports = function (app) {
   });
 
   // put
+  app.put("/api/trips", function (req, res) {
+    console.log(req.body);
+    db.Trips.update(
+      req.body,
+      {
+        where: {
+          id: req.body.id
+        }
+      })
+      .then(function (dbTrip) {
+        res.json(dbTrip);
+      });
+  });
+
 
 
 
   // DELETE route for deleting posts
   app.delete("/api/trips/:id", function (req, res) {
+    console.log(res);
     db.Trips.destroy({
       where: {
         id: req.params.id
       }
     })
-      .then(function (dbTrip) {
-        res.json(dbTrip);
+      .then(function (rowDeleted) { // rowDeleted will return number of rows deleted
+        if (rowDeleted === 1) {
+          console.log("Deleted successfully");
+          return;
+        }
+        else {
+          console.log("didnt delete anything");
+          return;
+        }
+      }, function (err) {
+        console.log(err);
       });
   });
 

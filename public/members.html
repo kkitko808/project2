@@ -2,41 +2,42 @@
 <html lang="en">
 
 <head>
-  <title>Adventure Planner</title>
+  <title> Travel Masters </title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
-  <link href="stylesheets/style.css" rel="stylesheet">  
-  <link href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="stylesheets/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="stylesheets\android-chrome-192x192.ico" type="image/x-icon">
 </head>
 
-<body>  
-<nav class="navbar navbar-light bg-light justify-content-between">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
+<body>
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/logout">
+          Logout
+        </a>
+      </div>
+      <h5>Welcome <span class="member-name"></span></h5>
     </div>
-    <h5>Welcome <span class="member-name"></span></h5>
-  </div>
-</nav>
+  </nav>
 
   <div class="container">
-      <h1>Plan Your Next Adventure!</h1>    
+    <h1>Plan Your Next Adventure!</h1>
     <div class="row">
       <div class="col-sm-4">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">APIs go here</h5>
+            <h5 class="card-title">Destination Information</h5>
             <hr>
             <p class="card-text">Capital: <span class="capital"></span></p>
             <p class="card-text">Population: <span class="population"></span></p>
             <p class="card-text">Language: <span class="language"></span></p>
 
             <br>
-       
+
           </div>
         </div>
       </div>
@@ -44,96 +45,95 @@
       <div class="col-sm-4">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Here's your new travel plan</h5>
+            <h5 class="card-title">See All Your Adventures Below</h5>
             <hr>
-            <div class="row" id="itinerary-area">            
-            </div>            
-            <p class="card-text">You're going to New Zealand</p>
-            <p class="card-text">To do Scuba Diving</p>
-            <p class="card-text">At 2:00pm Tuesday, March 17th, 2020</p>
-            <br>            
-            <br>
+            <div class="row" id="itinerary-area">
+            </div>
           </div>
         </div>
       </div>
       <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Create Your Adventure Plan</h5>
-              <hr>
-              <p class="card-text">Create your itinerary
-              </p>
-              <form>
-                <div class="form-group">
-                  <label for="destination">Destination</label>
-                  <input type="text" class="form-control" id="destination" placeholder="Where do you want to go?">
-                </div>
-                <div class="form-group">
-                  <label for="activity">Activity</label>
-                  <input type="text" class="form-control" id="activity" placeholder="What would you like to do?">
-                </div>    
-                <div class="form-group">
-                  <label for="Date">Date</label>
-                  <input type="text" class="form-control" id="date" placeholder="MM/DD/YYYY">
-                </div>                
-                <div class="container">
-                  <div class="row">
-                      <div class='col-sm-6'>
-                          
-                      </div>
-                      
-                  </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title" id="create-update-trip">Add Your Adventure</h5>
+            <hr>
+            <form>
+              <div class="form-group">
+                <label for="destination">Destination</label>
+                <input type="text" class="form-control" id="destination" placeholder="Where do you want to go?">
               </div>
-              
-                <div class="form-group">
-                  <label for="exampleFormControlSelect1">Time</label>
-                  <select class="form-control" id="time">
-                    <option>12:00am</option>
-                    <option>1:00am</option>
-                    <option>2:00am</option>
-                    <option>3:00am</option>
-                    <option>4:00am</option>
-                    <option>5:00am</option>
-                    <option>6:00am</option>
-                    <option>7:00am</option>
-                    <option>8:00am</option>
-                    <option>9:00am</option>
-                    <option>10:00am</option>
-                    <option>11:00am</option>
-                    <option>12:00pm</option>
-                    <option>1:00pm</option>
-                    <option>2:00pm</option>
-                    <option>3:00pm</option>
-                    <option>4:00pm</option>
-                    <option>5:00pm</option>
-                    <option>6:00pm</option>
-                    <option>7:00pm</option>
-                    <option>8:00pm</option>
-                    <option>9:00pm</option>
-                    <option>10:00pm</option>
-                    <option>11:00pm</option>
-                  </select>
+              <div class="form-group">
+                <label for="activity">Activity</label>
+                <input type="text" class="form-control" id="activity" placeholder="What would you like to do?">
+              </div>
+              <div class="form-group">
+                <label for="Date">Date</label>
+                <input type="text" class="form-control" id="date" placeholder="MM/DD/YYYY">
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class='col-sm-6'>
+
+                  </div>
+
                 </div>
-              </form>
-              <br>
-              <button class="btn btn-primary submit" type="submit">Add Activity</button>
-            </div>
+              </div>
+
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Time</label>
+                <select class="form-control" id="time">
+                  <option>12:00am</option>
+                  <option>1:00am</option>
+                  <option>2:00am</option>
+                  <option>3:00am</option>
+                  <option>4:00am</option>
+                  <option>5:00am</option>
+                  <option>6:00am</option>
+                  <option>7:00am</option>
+                  <option>8:00am</option>
+                  <option>9:00am</option>
+                  <option>10:00am</option>
+                  <option>11:00am</option>
+                  <option>12:00pm</option>
+                  <option>1:00pm</option>
+                  <option>2:00pm</option>
+                  <option>3:00pm</option>
+                  <option>4:00pm</option>
+                  <option>5:00pm</option>
+                  <option>6:00pm</option>
+                  <option>7:00pm</option>
+                  <option>8:00pm</option>
+                  <option>9:00pm</option>
+                  <option>10:00pm</option>
+                  <option>11:00pm</option>
+                </select>
+              </div>
+            </form>
+            <br>
+            <button class="btn btn-primary submit" type="submit">Add Activity</button>
           </div>
         </div>
+      </div>
     </div>
   </div>
-  <div class="footer">    
+  <div class="footer">
     <p>&copy Travel Masters 2020</p>
   </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
-  
-  
+
+
 </body>
 
 </html>
