@@ -40,6 +40,7 @@ $(document).ready(function () {
   }
 
   function handleLoginErr(err) {
+    if (err) {console.log(err);}
     $("#alert").text("Your email is already in use!");
     $("#alert").fadeIn(500);
   }

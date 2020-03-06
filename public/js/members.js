@@ -52,11 +52,11 @@ $(document).ready(function () {
           $("#activity").val("");
           $("#time").val("");
         }).then(function () {
-          $capital.text(capital);
-          $population.text(population);
-          $language.text(languages);
-          getAllTrips();
-        });
+        $capital.text(capital);
+        $population.text(population);
+        $language.text(languages);
+        getAllTrips();
+      });
     }
     else {
       var updatingTrip = {
@@ -69,9 +69,10 @@ $(document).ready(function () {
       createFormText();
       $.ajax({ url: "/api/trips", method: "PUT", data: updatingTrip })
         .then(function (data) {
+          console.log(data);
           location.reload();
         }
-        )
+        );
     }
   });
   //Put request (update activity details)
@@ -84,19 +85,19 @@ $(document).ready(function () {
   });
 });
 function updatingFormText() {
-  $("#create-update-trip").text("Update Your Adventure")
-  $(".btn-primary").text("Update Activity")
+  $("#create-update-trip").text("Update Your Adventure");
+  $(".btn-primary").text("Update Activity");
 }
 function createFormText() {
-  $("#create-update-trip").text("Add Your Adventure")
-  $(".btn-primary").text("Add Activity")
+  $("#create-update-trip").text("Add Your Adventure");
+  $(".btn-primary").text("Add Activity");
 }
 function getAllTrips() {
   $.ajax({ url: "/api/members", method: "GET" })
     .then(function (data) {
       console.log("Data:", data);
       if (data.length !== 0) {
-        $("#itinerary-area").empty()
+        $("#itinerary-area").empty();
         for (var i = 0; i < data.length; i++) {
           $("#itinerary-area").prepend(`<div class="card" class="nested-card" style="width: 18rem;">        
           <div class="card-body new-trip">

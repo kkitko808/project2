@@ -6,7 +6,7 @@ var persistRes = {
   capital: null,
   population: null,
   languages: null
-}
+};
 module.exports = function (app) {
 
   // getting all trips
@@ -49,7 +49,7 @@ module.exports = function (app) {
           persistRes.population = response.data[0].population;
           persistRes.languages = response.data[0].languages[0];
           console.log("recieved data!");
-          console.log(persistRes)
+          console.log(persistRes);
           res.send(persistRes);
         });
 
@@ -62,7 +62,7 @@ module.exports = function (app) {
 
   // put
   app.put("/api/trips", function (req, res) {
-    console.log(req.body)
+    console.log(req.body);
     db.Trips.update(
       req.body,
       {
@@ -80,6 +80,7 @@ module.exports = function (app) {
 
   // DELETE route for deleting posts
   app.delete("/api/trips/:id", function (req, res) {
+    console.log(res);
     db.Trips.destroy({
       where: {
         id: req.params.id
@@ -87,12 +88,12 @@ module.exports = function (app) {
     })
       .then(function (rowDeleted) { // rowDeleted will return number of rows deleted
         if (rowDeleted === 1) {
-          console.log('Deleted successfully');
-          return
+          console.log("Deleted successfully");
+          return;
         }
         else {
           console.log("didnt delete anything");
-          return
+          return;
         }
       }, function (err) {
         console.log(err);
