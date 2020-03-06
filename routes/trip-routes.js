@@ -17,7 +17,7 @@ module.exports = function (app) {
       where: {
         UserId: req.user.id
       },
-      order:[
+      order: [
         ["date", "DESC"],
         ["time", "DESC"]
       ]
@@ -51,7 +51,7 @@ module.exports = function (app) {
           }
         }).then((response) => {
           persistRes.capital = response.data[0].capital;
-          persistRes.population = response.data[0].population;
+          persistRes.population = response.data[0].population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
           persistRes.languages = response.data[0].languages[0];
           console.log("recieved data!");
           console.log(persistRes);
@@ -75,8 +75,22 @@ module.exports = function (app) {
           id: req.body.id
         }
       })
-      .then(function (dbTrip) {
-        res.json(dbTrip);
+      .then(function () {
+        axios({
+          "method": "GET",
+          "url": "https://restcountries-v1.p.rapidapi.com/name/" + req.body.destination,
+          "headers": {
+            "content-type": "application/octet-stream",
+            "x-rapidapi-host": "restcountries-v1.p.rapidapi.com",
+            "x-rapidapi-key": "17c7296748msh2331487f6775125p15f5e8jsn36e70eea3fb8"
+          }
+        }).then((response) => {
+          console.log(response)
+          persistRes.capital = response.data[0].capital;
+          persistRes.population = response.data[0].population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          persistRes.languages = response.data[0].languages[0];
+          res.send(persistRes);
+        });
       });
   });
 
