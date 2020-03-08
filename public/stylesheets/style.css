@@ -2,32 +2,27 @@ form.signup,
 form.login {
     margin-top: 50px;
 }
+
 h5 {
     font-weight: 400;
 }
-/* p.logIn, p.signUp {
-    font-size: 18px;
-    color: white;
-    text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
-    
-  } */
+
 .trip {
     display: block;
 }
+
 span.badge {
     opacity: 75%;
 }
+
 nav {
     opacity: 50%;
 }
-body {    
-    
+
+body {        
     background-image: url(white-boats-on-body-of-water-2265876.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    
+    background-size: cover;    
+    background-attachment: fixed;        
 }
 
 h1 {
@@ -35,11 +30,11 @@ h1 {
     text-align: center;
     font-size: 5rem;    
     margin-top: 40px;
-    margin-bottom: 50px;
-    /* background-color: rgba(91, 231, 241, 0.575); */
+    margin-bottom: 50px;    
     color: whitesmoke;
     text-shadow: rgba(88, 87, 114, 0.815) 1px 0 10px;
 }
+
 .footer {
     position: relative;
     opacity: 95%;
@@ -50,9 +45,7 @@ h1 {
     text-align: center;
     margin:1px;
     padding: 10px;
-    height:50px;      
-    /* background:rgb(99, 156, 167); */
-    
+    height:50px;   
 }
 
 div.card {
@@ -64,3 +57,15 @@ div.card {
 .new-trip{
     background-color: white;
 }
+
+@media screen and (max-width: 600px) {
+    h1 {
+      font-size:50px;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    h1 {
+      font-size:45px;
+    }
+  }
+  
