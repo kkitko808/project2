@@ -5,43 +5,45 @@
   <title>Login</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans:300,700|Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="shortcut icon" href="stylesheets\android-chrome-192x192.ico" type="image/x-icon">
   <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 
-<body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-      </div>
-    </div>
-  </nav>
+
+<body id="login-bg">
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Login Form</h2>
+  <h1 class="card-title">Travel Masters Login</h1>
+  <section>
+    <div class="card" id="card-background" style="width: 30rem;">
+      <div class="card-header" id="card-header-bg">
+        <h3 style="text-align: center;">Login</h3>
+      </div>
+      <div class="card-body">
         <form class="login">
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
+            <label for="exampleInputEmail1"></label>
             <input type="email" class="form-control" id="email-input" placeholder="Email">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
+            <label for="exampleInputPassword1"></label>
             <input type="password" class="form-control" id="password-input" placeholder="Password">
           </div>
-          <button type="submit" class="btn btn-default">Login</button>
+          <button type="submit" class="btn btn-secondary btn-lg">Login</button>
         </form>
-        <br />
-        
-        <span class="badge badge-pill badge-light">Or sign up <a href="signup.html">here</a></span>        
+        <br>
+      </div>
+      <div class="card-footer text-center" id="card-footer-bg" style="font-size:15pt;">
+        <span><a href="signup.html">Sign-Up Page</a></span>
       </div>
     </div>
   </div>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/login.js"></script>
+  <div class="footer">
+    <p>&copy Travel Masters 2020</p>
+  </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
 </body>
 
-</html>

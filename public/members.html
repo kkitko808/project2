@@ -5,6 +5,7 @@
   <title> Travel Masters </title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans:300,700|Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="stylesheets/style.css" rel="stylesheet">
@@ -12,15 +13,14 @@
   <link rel="shortcut icon" href="stylesheets\android-chrome-192x192.ico" type="image/x-icon">
 </head>
 
-<body>
-  <nav class="navbar navbar-light bg-light justify-content-between">
+<body id="member-bg">
+  <nav class="navbar navbar-light justify-content-between">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="/logout">
-          Logout
-        </a>
+          <h4 style="font-weight: bolder;">Logout</h4></a>
       </div>
-      <h5>Welcome <span class="member-name"></span></h5>
+      <h4 style="font-weight: bolder;">Welcome <span class="member-name"></span></h4>
     </div>
   </nav>
 
@@ -30,11 +30,11 @@
       <div class="col-sm-4">
         <div class="card mb-4">
           <div class="card-body">
-            <h5 class="card-title">Destination Information</h5>
+            <h5 class="card-title text-center">Destination Information</h5>
             <hr>
-            <p class="card-text">Capital: <span class="capital"></span></p>
-            <p class="card-text">Population: <span class="population"></span></p>
-            <p class="card-text">Language: <span class="language"></span></p>
+            <p class="card-text" style="color: slategray; font-weight: bolder; font-size: 20px;">Capital: <span class="capital"></span></p>
+            <p class="card-text" style="color: slategray; font-weight: bolder; font-size: 20px;">Population: <span class="population"></span></p>
+            <p class="card-text" style="color: slategray; font-weight: bolder; font-size: 20px;">Language: <span class="language"></span></p>
 
             <br>
 
@@ -45,7 +45,7 @@
       <div class="col-sm-4">
         <div class="card mb-4">
           <div class="card-body">
-            <h5 class="card-title">See All Your Adventures Below</h5>
+            <h5 class="card-title text-center">See All Your Adventures Below</h5>
             <hr>
             <div class="row" id="itinerary-area">
             </div>
@@ -55,19 +55,19 @@
       <div class="col-sm-4">
         <div class="card mb-4">
           <div class="card-body">
-            <h5 class="card-title" id="create-update-trip">Add Your Adventure</h5>
+            <h5 class="card-title text-center" id="create-update-trip">Add Your Adventure</h5>
             <hr>
             <form>
               <div class="form-group">
-                <label for="destination">Destination</label>
+                <label for="destination">dest</label>
                 <input type="text" class="form-control" id="destination" placeholder="Where do you want to go?">
               </div>
               <div class="form-group">
-                <label for="activity">Activity</label>
+                <label for="activity"></label>
                 <input type="text" class="form-control" id="activity" placeholder="What would you like to do?">
               </div>
 
-              <label for="date">Date:</label>
+              <label for="date" style="color: slategray;">Date:</label>
               <input type="date" id="date">
 
 
@@ -80,12 +80,12 @@
                 </div>
               </div>
 
-              <label for="time">Time:</label>
+              <label for="time" style="color: slategray;">Time:</label>
               <input type="time" id="time">
 
             </form>
             <br>
-            <button class="btn btn-primary submit" type="submit">Add Activity</button>
+            <button class="btn btn-secondary submit" type="submit">Add Activity</button>
           </div>
         </div>
       </div>
