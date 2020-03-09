@@ -54,11 +54,11 @@ $(document).ready(function () {
           $("#date").val("");
           $("#time").val("");
         }).then(function () {
-          $capital.text(capital);
-          $population.text(population);
-          $language.text(languages);
-          getAllTrips();
-        });
+        $capital.text(capital);
+        $population.text(population);
+        $language.text(languages);
+        getAllTrips();
+      });
     }
     else {
       var $capital = $(".capital");
