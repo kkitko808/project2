@@ -3,71 +3,171 @@ form.login {
     margin-top: 50px;
 }
 h5 {
-    font-weight: 400;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    color: slategrey;
 }
-/* p.logIn, p.signUp {
-    font-size: 18px;
-    color: white;
-    text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
-    
-  } */
+
 .trip {
     display: block;
 }
 span.badge {
-    opacity: 75%;
+    opacity: 50%;
 }
 nav {
     opacity: 50%;
+    background-color: whitesmoke;
+    height: 50px;
 }
-body {    
+#member-bg {    
     
-    background-image: url(white-boats-on-body-of-water-2265876.jpg);
+    background-image: url(members-abckground.jpeg);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100%;
-    
+       
+}
+
+#signup-bg {
+    background-image: url(SignUp-Background.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+#login-bg{
+    background-image: url(Login-Background.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+
+}
+
+.text-content{
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    font-size: 12pt;
+    padding: bottom 0;
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    font-size: 12pt;
 }
 
 h1 {
-    font-family: 'Open Sans', sans-serif;
+    font-family:'Open Sans', sans-serif;
+    font-weight: bold;
     text-align: center;
-    font-size: 5rem;    
-    margin-top: 40px;
+    font-size: 60pt;    
+    margin-top: 80px;
+    padding-bottom: 50px;
     margin-bottom: 50px;
-    /* background-color: rgba(91, 231, 241, 0.575); */
-    color: whitesmoke;
-    text-shadow: rgba(88, 87, 114, 0.815) 1px 0 10px;
+    color: white;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+h3{
+    font-family:'Raleway', sans-serif;
+    font-weight: 800;
+    color: white;
+    font-size: 30pt;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+h4{
+    font-family:'Raleway', sans-serif;
+    font-weight: 800;
+    color:black;
+    font-size: 20 pt;
+    opacity:100%;
+
 }
 .footer {
     position: relative;
-    opacity: 95%;
     bottom: -4rem;
     width: 100%;
-    background-color: rgba(74, 211, 221, 0.603);
     color: white;
     text-align: center;
     margin:1px;
     padding: 10px;
-    height:50px;      
-    /* background:rgb(99, 156, 167); */
+    height:50px;
+    font-weight: 900; 
+    font-size: larger;
+    text-shadow: 1px 1px 1px #000000;
     
 }
 
+#card-footer-bg{
+    background-color: rosybrown;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px #000000;
+
+}
+
+#card-header-bg {
+    background-color: rosybrown;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px #000000;
+
+
+}
+
 div.card {
-    background-color: rgba(235, 247, 247, 0.911);
-    font-family: 'El Messiri', sans-serif;
+    background-color: white (235, 247, 247, 0.911);
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    font-size: 12pt;
     margin:auto;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 } 
 
 .new-trip{
     background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #card-background{
     background-color: white;
-    width: 300px;
+    max-width: 500px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
+
+
+.form-control{
+
+    margin-top: -26px;
+    padding: 1.2rem;
+}
+
+a, a:link{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+      font-size:50px;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    h1 {
+      font-size:45px;
+    }
+  }

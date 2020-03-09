@@ -91,6 +91,7 @@ $(document).ready(function () {
     updatingId = $(this).attr("id");
     updating = true;
     updatingFormText();
+    
   });
 });
 function updatingFormText() {
