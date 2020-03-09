@@ -54,11 +54,11 @@ $(document).ready(function () {
           $("#date").val("");
           $("#time").val("");
         }).then(function () {
-        $capital.text(capital);
-        $population.text(population);
-        $language.text(languages);
-        getAllTrips();
-      });
+          $capital.text(capital);
+          $population.text(population);
+          $language.text(languages);
+          getAllTrips();
+        });
     }
     else {
       var $capital = $(".capital");
@@ -107,11 +107,11 @@ $(document).ready(function () {
 });
 function updatingFormText() {
   $("#create-update-trip").text("Update Your Adventure");
-  $(".btn-primary").text("Update Activity");
+  $(".btn-secondary").text("Update Activity");
 }
 function createFormText() {
   $("#create-update-trip").text("Add Your Adventure");
-  $(".btn-primary").text("Add Activity");
+  $(".btn-secondary").text("Add Activity");
 }
 function getAllTrips() {
   $.ajax({ url: "/api/members", method: "GET" })

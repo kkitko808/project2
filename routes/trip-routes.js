@@ -40,7 +40,7 @@ module.exports = function (app) {
   // post
   app.post("/api/trips", function (req, res) {
     console.log(req.body);
-
+    console.log("checknamehere")
     db.Trips.create({
       destination: req.body.destination,
       activity: req.body.activity,
