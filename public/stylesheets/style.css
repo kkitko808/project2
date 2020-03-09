@@ -2,6 +2,7 @@ form.signup,
 form.login {
     margin-top: 50px;
 }
+
 h5 {
     font-family: 'Raleway', sans-serif;
     font-weight: bolder;
@@ -12,9 +13,11 @@ h5 {
 .trip {
     display: block;
 }
+
 span.badge {
     opacity: 50%;
 }
+
 nav {
     opacity: 50%;
     background-color: whitesmoke;
@@ -90,6 +93,7 @@ h4{
     opacity:100%;
 
 }
+
 .footer {
     position: relative;
     bottom: -4rem;

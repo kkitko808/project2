@@ -9,6 +9,16 @@ var persistRes = {
 };
 module.exports = function (app) {
 
+  app.get("/api/trip/:id", function (req, res) {
+    console.log("got here with id of ", req.params.id);
+    db.Trips.findAll({
+      where: {
+        id: req.params.id
+      }
+    }).then(function (dbTrip) {
+      res.send(dbTrip[0]);
+    });
+  });
   // getting all trips
   app.get("/api/members", function (req, res) {
 
@@ -93,9 +103,6 @@ module.exports = function (app) {
         });
       });
   });
-
-
-
 
   // DELETE route for deleting posts
   app.delete("/api/trips/:id", function (req, res) {
