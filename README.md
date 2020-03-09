@@ -13,7 +13,7 @@
 <br />
 
 <p align="center">
-      <img src="#"  alt="Logo" width="200" height="200" style="border-radius: 50%">
+      <img src="/public/stylesheets/android-chrome-192x192.ico" width="200" height="200">
   </a>
 
   <h3 align="center">The Travel Planner by Travel Masters</h3>
